@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%block body%}
+
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">tec_id</th>
+        <th scope="col">tec_name</th>
+        
+        <th scope="col">subject</th>
+        <th scope="col">salary</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+        {%for i in e1%}
+
+
+      <tr>
+        <th scope="row">{{i.tec_id}}</th>
+        <td>{{i.tec_name}}</td>
+        <td>{{i.subject}}</td>
+        <td>{{i.salary}}</td>
+      
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  {% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{%block body%}
+
+
+<form method="post" action="/myapp1/signup1/">
+    {%csrf_token%}
+
+<div class="form-group">
+        <label for="exampleDropdownFormEmail2">user_name</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="enter user_name">
+</div>
+
+<div class="form-group">
+    <label for="exampleDropdownFormEmail2">email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="email@example.com">
+  </div>
+
+  <div class="form-group">
+    <label for="first_name">first_name</label>
+    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="enter first_name">
+  </div>
+a
+  <div class="form-group">
+    <label for="last_name">last_name</label>
+    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="enter last_name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleDropdownFormPassword2">Password</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="enter password">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleDropdownFormPassword2">conform_Password</label>
+    <input type="password" class="form-control" id="conformPassword" name="conformPassword" placeholder="Password">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Sign up</button>
+</form>
+
+
+
+
+
+{% endblock %}

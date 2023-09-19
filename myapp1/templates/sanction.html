@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{%block body%}
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">std_id</th>
+        <th scope="col">std_name</th>
+        <th scope="col">leave</th>
+        
+        <th scope="col">cancel</th>
+        <th scope="col">status</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+        {%for i in o%}
+
+
+      <tr>
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.std_name}}</td>
+        <td>{{i.leave}}</td>
+        
+        
+        
+        {%if i.sanction_leave%}
+        <td><a type="button" class="btn-success p-2" href="/myapp1/sanction/{{i.id}}"disabled>cannot be delete</a></td>
+        {% else %}
+        <td><a type="button" class="btn-danger p-2" href="/myapp1/sanction/{{i.id}}">delete</a></td>
+        {% endif%}
+
+        {%if i.sanction_leave%}
+        <td><i class="fa-solid fa-circle-check"></i>approved</td>
+        {% else %}
+        <td><i class="fa-solid fa-truck"></i>not approved</td>
+        {% endif%}
+        
+
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+  
+
+{% endblock %}

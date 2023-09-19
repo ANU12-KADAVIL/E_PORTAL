@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{%block body%}
+
+    <title>attendance!</title>
+  </head>
+  <body>
+    <h1>LEAVE SECTION</h1>
+
+    <form method="post" style="border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;">
+
+      {% csrf_token %}
+
+      <div class="form-row">
+
+
+
+<div class="form-group">
+  <label for="inputAddress2">std_name</label>
+  <input type="text" class="form-control" id="inputAddress2" name="full_name" placeholder=" ">
+</div>
+<br>
+
+<div class="form-group">
+  <label for="inputAddress2">leave</label>
+  <input type="text" class="form-control" id="inputAddress2" name="leave" placeholder=" ">
+</div>
+
+
+<br>
+<button type="submit" class="btn btn-primary">submit</button>
+    </form>
+    {% endblock %}

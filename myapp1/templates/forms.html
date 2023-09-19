@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{%block body%}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>SUNSHINE COLLEGE OF ENINEERING</title>
+  </head>
+  <body>
+    <h1>STUDENT RECORDS</h1>
+
+    <form method="post" style="border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;">
+
+        {% csrf_token %}
+
+        <div class="form-row">
+          {% comment %} <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
+        </div> {% endcomment %}
+        <div class="form-group">
+          <label for="inputAddress">std_id</label>
+          <input type="text"style="background-color: #FFE17B;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;" class="form-control" id="inputAddress" name="std_id" placeholder="">
+        </div>
+
+      </div>
+
+        <div class="form-group">
+          <label for="inputAddress2">std_name</label>
+          <input type="text"style="background-color: #FFE17B;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;" class="form-control" id="inputAddress2" name="std_name" placeholder=" ">
+        </div>
+
+        
+
+        <div class="form-group">
+          <label for="inputAddress2">attendance</label>
+          <input type="text"style="background-color: #FFE17B;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;" class="form-control" id="inputAddress2" name="attendance" placeholder=" ">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">mark</label>
+            <input type="text" style="background-color: #FFE17B;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;"class="form-control" id="inputAddress2" name="mark" placeholder=" ">
+          </div>
+        {% comment %} <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">departmaent</label>
+            <input type="text" class="form-control" id="inputCity" name="department">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">visa</label>
+            <select id="inputState" class="form-control" name="visa">
+              <option selected>Choose visa</option>
+              <option>family visa</option>
+              <option>visit visa</option>
+              <option>freelance visa</option>
+            </select>
+          </div> {% endcomment %}
+          {% comment %} <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Check me out
+            </label>
+          </div>
+        </div> {% endcomment %}
+        <button type="submit" class="btn btn-primary">submit</button>
+      </form>
+
+      {% endblock %}
